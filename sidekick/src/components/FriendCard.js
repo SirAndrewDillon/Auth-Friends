@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { deleteFriend } from '../actions';
 
+
 import './FriendCard.scss';
 
 const FriendCard = props => {

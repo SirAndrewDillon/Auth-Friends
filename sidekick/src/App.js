@@ -7,6 +7,7 @@ import { logout } from './actions';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
 import PrivateRoute from './components/PrivateRoute';
+import IMG from './Mickey.png'
 
 import './App.scss';
 
@@ -18,7 +19,7 @@ class App extends Component {
         <div className="App">
           {this.props.error !== '' && (<div className="error-text">{this.props.error}</div>)}
           <header>
-            <h1>ReduxFriends</h1>
+            <img src={IMG} alt="logo"></img>
             <nav>
               {this.props.loggedIn && (
                 <>

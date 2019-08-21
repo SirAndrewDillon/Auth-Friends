@@ -1,11 +1,20 @@
 import axios from 'axios';
 import axiosWithAuth from '../axiosAuth';
 
+export const ADD_FRIEND = 'ADD_FRIEND'
 export const GET_FRIENDS = 'GET_FRIENDS';
 export const LOGIN_FETCH = 'LOGIN_FETCH';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOGOUT = 'LOGOUT';
+
+export const addFriend = e => dispatch => {
+    axiosWithAuth().post(`http://localhost:5000/api/friends/${e.target.value}`)
+        .then(res => {
+            dispatch({ type: ADD_FRIEND, payload: res.data });
+        })
+        .catch(err => console.log(err));
+}
 
 export const deleteFriend = e => dispatch => {
     axiosWithAuth().delete(`http://localhost:5000/api/friends/${e.target.value}`)

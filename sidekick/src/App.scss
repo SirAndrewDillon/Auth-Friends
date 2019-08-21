@@ -26,9 +26,10 @@ body {
 		padding: 4px;
 
 		input[type="text"] {
-			background: $background-color;
+			background: linear-gradient(to right, #403a3e, #be5869);
 			border: 0;
-			border-bottom: 2px solid white;
+			color: #fff;
+			border-bottom: 0.5px solid white;
 			margin: 4px;
 			max-width: 100px;
 			outline: none;
